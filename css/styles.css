@@ -1,0 +1,55 @@
+body{
+    background-color: black;
+}
+
+#header{
+    height: 105px;
+    background-color: rgb(250, 245, 245);
+}
+
+#serie-logo{
+    width: 180px;
+    margin-left: 50px;
+}
+
+.li-nav{
+    text-decoration: none;
+    color: black;
+    text-decoration: solid;
+    font-family: "Anton SC", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    font-style: normal;
+    list-style: none;
+}
+
+.li-nav:hover{
+    color: red;
+}
+
+#menu{
+    list-style: none;
+    width: 800px;
+    margin-left: 550px; 
+    margin-top: -30px; 
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#img-principal{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 65%;
+}
+
+#galeria{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.fotos-galeria{
+    width: 25%;
+}
