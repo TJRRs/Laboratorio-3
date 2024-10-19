@@ -1,5 +1,6 @@
 body{
     background-color: black;
+    font-family: "Anton SC", sans-serif;
 }
 
 #header{
@@ -16,7 +17,6 @@ body{
     text-decoration: none;
     color: black;
     text-decoration: solid;
-    font-family: "Anton SC", sans-serif;
     font-size: 22px;
     font-weight: 500;
     font-style: normal;
@@ -24,7 +24,7 @@ body{
 }
 
 .li-nav:hover{
-    color: red;
+    color: rgb(165, 14, 14);
 }
 
 #menu{
@@ -36,20 +36,93 @@ body{
     justify-content: space-evenly;
 }
 
+#principal{
+    margin-bottom: 400px;
+}
+
 #img-principal{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 40px;
     width: 65%;
 }
 
 #galeria{
     display: flex;
     justify-content: space-evenly;
+    gap: 10px;
+    flex-wrap: wrap;
     margin-top: 100px;
 }
 
 .fotos-galeria{
     width: 25%;
+    margin-bottom: 30px;
+}
+
+#sinopsis{
+    display: block;
+    width: 1200px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#titulo-sinopsis{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}
+
+#texto-img{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.sinopsis-img{
+    width: 40%;
+    margin-top: 30px;
+}
+
+.parrafos-sinopsis{
+    width: 50%;
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.resaltar{
+    color: rgb(165, 14, 14);
+}
+
+#footer{
+    background-color: black;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40vh;
+}
+
+#texto-footer{
+    color: white;
+}
+
+i{
+    font-size: 22px;
+}
+
+i:hover{
+    color: rgb(165, 14, 14);
+}
+
+
+#redes{
+    width: 200px;
+    margin-top: -2px;
+    display: flex;
+    justify-content: space-around;
 }
