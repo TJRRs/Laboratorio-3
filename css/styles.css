@@ -8,6 +8,11 @@ body{
 #header{
     height: 105px;
     background-color: rgb(250, 245, 245);
+    width: 99vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    
 }
 
 #serie-logo{
@@ -40,28 +45,36 @@ li, a{
 
 #menu{
     list-style: none;
-    width: 800px;
-    margin-left: 530px; 
-    margin-top: -30px; 
+    width: auto;
     display: flex;
-    justify-content: space-evenly; 
+    justify-content: space-between;
+    position: relative;
+}
+
+#menu li {
+    margin: 0 18px; /* Espacio entre los elementos del menú */
 }
 
 #desplegable{
     display: none;
-    width: 200px;
+    width: 180px;
     background-color: rgb(250, 245, 245);
     position: absolute;
-    top: 90px;
+    left: 50%; /* Posicionado en el centro horizontal del padre */
+    transform: translateX(-50%);
     text-align: center;
-    right: 365px;
     margin: 0;
     padding: 0;
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
     padding-bottom: 20px;
+  
 }  
+
+.personajes{
+    position: relative;
+}
 
 .personajes:hover #desplegable {
     display: flex;
@@ -85,7 +98,7 @@ nav ul ul li a{
 
 /*-----------------------------------------------------------------------------------------------------*/
 
-/*                        -----SECCIÓN PRINCICPAL Y GALERÍA-----                                       */
+/*                        -----SECCIÓN PRINCICPAL-----                                       */
 
 #principal{
     margin-bottom: 400px;
@@ -107,11 +120,26 @@ nav ul ul li a{
     margin-top: 100px;
 }
 
-.fotos-galeria{
-    width: 25%;
+#galeria a img{
+    width: 110%;
     margin-bottom: 30px;
 }
 
+
+
+.secundario{
+	margin-top: 5%;
+	display: flex;
+}
+.secundario div{
+	width: 33%;
+	padding: 2%;
+	text-align: center;
+}
+#galeria a img{
+	width: 250px;
+	margin-bottom: 2rem;
+}
 
 /*-----------------------------------------------------------------------------------------------------*/
 
@@ -191,7 +219,45 @@ nav ul ul li a{
     letter-spacing: 0.5px;
 }
 
+/*-----------------------------------------------------------------------------------------------------*/
 
+/*                                  ----- GALERÍA -----                                               */
+
+#galeria-section{
+    text-align: center;
+}
+
+#galeria-section h1{
+    color: white;
+
+    text-align: center;
+    margin-top: 80px;
+    font-size: 60px;
+}
+
+#galeria{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    padding: 10px;
+    padding-top: 35px;
+    border: 2px solid rgb(236, 22, 74);
+}
+
+
+#galeria a img{
+    width: 60%;
+    border: 4px solid rgb(236, 22, 74);
+    outline: 10px solid white;
+    border-radius: 10px;
+}
+
+.descripcion-img{
+    font-weight: lighter;
+}
 
 
 /*-----------------------------------------------------------------------------------------------------*/
