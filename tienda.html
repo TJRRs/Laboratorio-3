@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link href="css/lightbox.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/f5900b8bb0.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +17,10 @@
 <body>
     
     <header id="header">
-        <img src="imagenes/logo.png" alt="sopranos-logo" id="serie-logo">
+        <a  href="index.html">
+
+            <img src="imagenes/logo.png" alt="sopranos-logo" id="serie-logo">
+        </a>
 
         <div id="menu">
 
@@ -30,6 +34,7 @@
                     <a href="laserie.html" class="li-nav">LA SERIE</a>
                 </li>
                 <li class="personajes">
+
                     <a href="" class="li-nav" class="personajes">PERSONAJES</a>
                     
                     <ul id="desplegable">
@@ -59,38 +64,39 @@
       
     </header>
 
-   
+    <section id="principal">
+       
+        <div id="texto-tienda">
+            <h3>Si está buscando productos oficiales de los Soprano puede ingresar a este <a href="https://thesopranos.store/" target="_blank">link</a> o este otro 
+                <a href="https://shop.hbo.com/collections/sopranos" target="_blank">link</a>, para comprar cualquier tipo de producto relacionado a la serie. </h3>
 
-    <h1>Tony Soprano</h1>
-
-
-    <div class="personaje" style="margin-top: -50px;">
-        <img src="imagenes/chris.jpg" alt="tony-soprano" class="personaje-img">
-
-        <div class="texto">
-            <h1 class="personaje-h1">Christopher Moltisanti</h1>
-
-            <p class="personaje-p">Christopher Moltisanti, interpretado por Michael Imperioli, es el <span class="resaltar">sobrino</span> de Tony Soprano y uno de los personajes más complejos de la serie.
-                 Como un miembro clave de la organización criminal, Christopher es visto como el <span class="resaltar">protegido</span> de Tony y su <span class="resaltar">heredero potencial</span> 
-                 en el mundo del crimen. A lo largo de la serie, Christopher lucha por <span class="resaltar">demostrar su lealtad</span> y su valor, aunque su carácter impulsivo y su lucha con la 
-                 <span class="resaltar">adicción a las drogas</span> frecuentemente ponen en peligro su posición dentro de la organización.
-                <br>
-                 Su ambición no se limita al mundo del crimen, ya que Christopher sueña con convertirse en <span class="resaltar">guionista y director de cine</span>. 
-                 Este deseo de alcanzar algo más fuera de la mafia lo coloca en un constante <span class="resaltar">conflicto interno</span>, 
-                 ya que se debate entre sus aspiraciones artísticas y la realidad brutal de su vida criminal. A menudo se siente <span class="resaltar">frustrado</span> 
-                 por no ser tomado en serio ni dentro de la familia mafiosa ni en sus intentos por escapar de ella.
-                <br>
-                 A lo largo de la serie, Christopher atraviesa un <span class="resaltar">arco trágico</span> que lo ve luchar con su <span class="resaltar">adicción</span>, 
-                 sus problemas de <span class="resaltar">autoestima</span>, y su deseo de ganarse el <span class="resaltar">respeto</span> de Tony. Su relación con su pareja, 
-                 Adriana, también juega un papel crucial en su desarrollo, especialmente cuando la <span class="resaltar">lealtad de Adriana</span> a la mafia y a Christopher se pone a prueba por el FBI. 
-            </p>
-
-                
-
-                    
+            <h4>Le gustaría recibir notificaciones en caso de haber ofertas o descuentos en las tiendas ?</h4>
         </div>
 
-    </div>
+
+        <form class="form">
+            <h3 class="titulo-contacto">En ese caso llene este formulario</h3>
+
+            <label for="nombre" class="etiqueta">Nombre: </label>
+            <input placeholder="Ingrese su nombre..." id="nombre" class="datos"></input>
+
+            <label for="nombre" class="etiqueta">Apellido: </label>
+            <input placeholder="Ingrese su apellido..." class="datos"></input>
+
+            <label for="nombre" class="etiqueta">Email: </label>
+            <input placeholder="Ingrese su email..." class="datos"></input>
+
+            <label for="nombre" class="etiqueta">Número de teléfono: </label>
+            <input type="tel" name="telefono" id="telefono" placeholder="Ingrese su número de teléfono..." class="datos">
+
+            <button>Enviar</button>
+            
+        </form>
+       
+
+    </section>
+
+
 
     
     <footer id="footer">
@@ -117,7 +123,20 @@
 
     </footer>
        
-      
+    
+
+    <script type="text/javascript">
+        function myFunction() {
+          var x = document.getElementById("menu_bar");
+          if (x.className === "") {
+            x.className += " responsive";
+          } else {
+            x.className = "";
+          }
+        }
+    </script>
+
+    <script src="js/lightbox-plus-jquery.min.js"></script>
 
 </body>
 </html>
