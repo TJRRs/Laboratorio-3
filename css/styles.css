@@ -1,12 +1,13 @@
 body{
     background-color: black;
     font-family: "Anton SC", sans-serif;
+    box-sizing: border-box;
 }
 
 
 /*-----------------------------------------------------------------------------------------------------*/
 
-/*       -----HEADER-----       */
+/*                          ----------HEADER-----------                                               */
 
 #header{
     height: 105px;
@@ -15,13 +16,22 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    
 }
 
 #serie-logo{
     width: 180px;
     margin-left: 50px;
 }
+
+button{
+    border: 0;
+    background-color: rgb(250, 245, 245);
+}
+
+.abrir-menu,
+.cerrar-menu{
+        display: none;
+    }
 
 li, a{
     list-style: none;
@@ -54,7 +64,7 @@ li, a{
     position: relative;
 }
 
-#menu li {
+.li-nav{
     margin: 0 18px; /* Espacio entre los elementos del menú */
 }
 
@@ -87,7 +97,6 @@ li, a{
     display: block;
     width: 150px;
     float: none;
-    width: 150px;
 }
 
 .desplegable-a:hover{
@@ -99,12 +108,18 @@ nav ul ul li a{
 }
 
 
+.icon{
+    display: none;
+}
+
 /*-----------------------------------------------------------------------------------------------------*/
 
 /*                        -----SECCIÓN PRINCICPAL-----                                                 */
 
 #principal{
     margin-bottom: 400px;
+    display: block;
+    margin: 0 auto;
 }
 
 #img-principal{
@@ -160,7 +175,7 @@ nav ul ul li a{
 
 #sinopsis{
     display: block;
-    width: 1200px;
+    width: 70%;
     margin-top: 150px;
     margin-left: auto;
     margin-right: auto;
@@ -336,8 +351,11 @@ nav ul ul li a{
     border-radius: 5px;
 }
 
-button{
+.submit{
     width: 50%;
+    background-color: rgb(236, 22, 74);
+    border-radius: 5px;
+    padding: 10px;
 }
 
 /*-----------------------------------------------------------------------------------------------------*/
@@ -371,4 +389,214 @@ i:hover{
     margin-top: -2px;
     display: flex;
     justify-content: space-around;
+}
+
+
+.mostrar{
+    display: flex;
+}
+
+
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+/*                        -----ESTILOS PARA RESPONSIVE MOBILE-----                                     */
+
+@media (max-width: 480px) {
+
+    /*-----------------------------------------------------------------------------------------------------*/
+
+    /*                        -----HEADER Y HOME-----                                                             */
+
+    #header{
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    header nav {
+        flex-basis: 100%;
+    }
+
+    #desplegable{
+        z-index: 1;
+        width: 20rem;
+        gap: 25px;
+        background-color: rgb(231, 224, 224);
+        padding-top: 20px;
+    }  
+
+    .desplegable-a{
+        font-size: 25px;
+    }
+
+    .mostrar{
+        display: flex;
+    }
+    
+    
+    #principal{
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+        margin-bottom: -100px;
+    }
+
+
+    #img-principal{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        height: auto;
+    }
+
+    #parrafo-principal{
+        text-align: left;
+        width: 80%;
+        font-size: 20px;
+    }
+
+    .icon{
+        display: block;
+    }
+
+    .abrir-menu,
+    .cerrar-menu{
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    #nav{
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 26rem;
+        padding: 2rem;
+        gap: 1rem;
+        background-color: rgb(250, 245, 245);
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    
+    #nav li {
+        margin: 0 18px; /* Espacio entre los elementos del menú */
+    }
+
+    #menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: 70px;
+        width: 26rem;
+        padding: 2rem;
+        gap: 1rem;
+        background-color: rgb(250, 245, 245);
+    } 
+    
+    #nav.visible{
+        opacity: 1;
+        visibility: visible;
+    } 
+
+
+    
+    /*-----------------------------------------------------------------------------------------------------*/
+    /*                        -----PÁGINA DE SINOPSIS-----                                                             */
+
+    #sinopsis{
+        display: block;
+        width: 100%;
+        margin-top: 120px;
+    }
+
+    #titulo-sinopsis{
+        width: 100%;
+        font-size: 50px;
+    }
+
+    .sinopsis-img{
+        display: none;
+    }
+
+    .parrafos-sinopsis{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        font-size: 20px;
+    }
+
+    /*-----------------------------------------------------------------------------------------------------*/
+    /*                        -----PÁGINA DE LA TIENDA-----                                                */
+
+    #texto-tienda{
+        margin-top: 40px;
+        width: 95%;
+        height: 320px;
+        padding-top: 10px;
+        font-size: 25px;
+    }
+
+    .form{
+        width: 95%;
+        height: 520px;
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
+
+    .etiqueta{
+        width: 90%;
+        text-align: left;
+    }
+    
+    .datos{
+        width: 90%;
+        margin-bottom: 30px;
+        margin-top: 5px;
+        padding: 10px;
+    }
+
+    button{
+        margin-top: 30px;
+        width: 85%;
+    }
+
+    section{
+        margin-bottom: -300px;
+    }
+
+    /*-----------------------------------------------------------------------------------------------------*/
+    /*                        -----PÁGINA DE PERSONAJE-----                                                */
+
+    .personaje{
+        width: 90%;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+        margin-top: 30px;
+        border: 8px solid white;
+    }
+
+    .personaje-img{
+        width: 100%;
+        height: 90%;
+    }
+
+    #texto-footer{
+        width: 30%;
+    }
 }

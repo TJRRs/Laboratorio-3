@@ -16,55 +16,77 @@
 <body>
     
     <header id="header">
-        <img src="imagenes/logo.png" alt="sopranos-logo" id="serie-logo">
+        <a  href="index.html">
 
-        <div id="menu">
+            <img src="imagenes/logo.png" alt="sopranos-logo" id="serie-logo">
+        </a>
 
-            <nav >
+        <button id="abrir" class="abrir-menu"><i class="fa fa-bars"></i></button>
+
+            <nav id="nav">
                 
-            <ul id="menu" >
-                <li>
-                    <a href="index.html" class="li-nav">INICIO</a>
-                </li>
-                <li>
-                    <a href="laserie.html" class="li-nav">LA SERIE</a>
-                </li>
-                <li class="personajes">
-                    <a href="" class="li-nav" class="personajes">PERSONAJES</a>
+                <button id="cerrar" class="cerrar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>                
+
+                <ul id="menu" >
+                    <li>
+                        <button class="li-nav">
+
+                            <a href="index.html" class="li-nav">INICIO</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="li-nav">
+
+                            <a href="laserie.html" class="li-nav">LA SERIE</a>
+                        </button>
+                    </li>
+
+                    <li class="personajes">
+
+                        <button class="li-nav personajes" id="toggleMenu" >
+                            <a href="#" class="li-nav">PERSONAJES</a>
+                        </button>
+                        
+                        <ul id="desplegable">
+                            <li> <a href="tony.html" class="desplegable-a" >Tony Soprano</a></li>
+                            <li> <a href="carmela.html" class="desplegable-a">Carmela Soprano</a> </li>
+                            <li> <a href="chris.html" class="desplegable-a">Christopher Moltisanti</a> </li>
+                            <li> <a href="silvio.html" class="desplegable-a">Silvio Dante </a> </li>  
+                            <li> <a href="paulie.html" class="desplegable-a">Paulie Gualtieri</a> </li>
+                            <li> <a href="melfi.html" class="desplegable-a">Dr. Melfi</a> </li>
+                        </ul>
+
                     
-                    <ul id="desplegable">
-                        <li ><a href="tony.html" class="desplegable-a" >Tony Soprano</a></li>
-                        <li  > <a href="carmela.html" class="desplegable-a">Carmela Soprano</a> </li>
-                        <li  > <a href="chris.html" class="desplegable-a">Christopher Moltisanti</a> </li>
-                        <li  > <a href="silvio.html" class="desplegable-a">Silvio Dante </a> </li>  
-                        <li  > <a href="paulie.html" class="desplegable-a">Paulie Gualtieri</a> </li>
-                        <li  > <a href="melfi.html" class="desplegable-a">Dr. Melfi</a> </li>
-                    </ul>
+                    </li>
+                    <li>
+                        <button>
 
-                  
-                </li>
-                <li>
-                    <a href="galeria.html" class="li-nav">GALERÍA</a>
-                </li>
-                <li>
-                    <a href="tienda.html" class="li-nav">TIENDA</a>
-                </li>
+                            <a href="galeria.html" class="li-nav">GALERÍA</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+
+                            <a href="tienda.html" class="li-nav">TIENDA</a>
+                        </button>
+                    </li>
 
 
-            </ul>
+                </ul>
           
             </nav>
 
-        </div>
+       
       
     </header>
-
    
 
-    <h1>Tony Soprano</h1>
+    
 
 
-    <div class="personaje" style="margin-top: -50px;">
+    <div class="personaje" >
         <img src="imagenes/carmela.jpg" alt="tony-soprano" class="personaje-img">
 
         <div class="texto">
@@ -116,7 +138,7 @@
 
     </footer>
        
-      
+    <script src="js/script.js"></script>
 
 </body>
 </html>
