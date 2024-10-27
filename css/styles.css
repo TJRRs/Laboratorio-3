@@ -396,7 +396,17 @@ i:hover{
     display: flex;
 }
 
-
+#go-top{
+    text-align: center;
+    position: fixed;
+    bottom: 2rem;
+    right: -100px;
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 30px;
+    transition: right 0.3s ease;
+}
 
 /*-----------------------------------------------------------------------------------------------------*/
 
@@ -555,7 +565,7 @@ i:hover{
         width: 95%;
         height: 520px;
         padding-top: 10px;
-        padding-bottom: 40px;
+        padding-bottom: 50px;
     }
 
     .etiqueta{
@@ -599,4 +609,16 @@ i:hover{
     #texto-footer{
         width: 30%;
     }
+   
+    #go-top{
+        display: block;
+        text-align: center;
+        position: fixed;
+        bottom: 2rem;
+        right: -100px;
+        background-color: rgb(197, 173, 173);
+        transition: right 0.3s ease;
+    }
+    
+    
 }

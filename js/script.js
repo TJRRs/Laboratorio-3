@@ -4,6 +4,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const cerrar = document.querySelector("#cerrar");
     const toggleButton = document.getElementById("toggleMenu");
     const desplegableMenu = document.getElementById("desplegable");
+    
+    function irArriba(){ 
+        window.addEventListener('scroll', () => {
+            var scroll = window.pageYOffset || document.documentElement.scrollTop;
+            console.log(scroll);
+            var botonArriba = document.getElementById('go-top');
+    
+            botonArriba.addEventListener('click', () =>{
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                })
+            } )
+
+            if(scroll > 300){
+                botonArriba.style.right = "15px";
+            } else {
+                botonArriba.style.right = "-100px";
+            }
+        });
+    }
+
+    irArriba();
 
     abrir.addEventListener("click", () => {
         nav.classList.add("visible");
