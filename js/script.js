@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function irArriba(){ 
         window.addEventListener('scroll', () => {
             var scroll = window.pageYOffset || document.documentElement.scrollTop;
-            console.log(scroll);
+            // console.log(scroll);
             var botonArriba = document.getElementById('go-top');
     
             botonArriba.addEventListener('click', () =>{
