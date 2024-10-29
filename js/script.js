@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } )
 
             if(scroll > 300){
-                botonArriba.style.right = "15px";
+                botonArriba.style.right = "10px";
             } else {
                 botonArriba.style.right = "-100px";
             }

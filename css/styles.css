@@ -1,9 +1,16 @@
 body{
     background-color: black;
-    font-family: "Anton SC", sans-serif;
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
     box-sizing: border-box;
 }
 
+h1, h2, h3{
+    font-family: "Anton SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 /*-----------------------------------------------------------------------------------------------------*/
 
@@ -49,6 +56,7 @@ li, a{
     font-size: 22px;
     font-weight: 500;
     font-style: normal;
+    font-family: "Anton SC", serif;
     list-style: none;
 }
 
@@ -76,6 +84,7 @@ li, a{
     left: 50%; /* Posicionado en el centro horizontal del padre */
     transform: translateX(-50%);
     text-align: center;
+    font-family: "Anton SC", serif;
     margin: 0;
     padding: 0;
     justify-content: center;
@@ -122,6 +131,13 @@ nav ul ul li a{
     margin: 0 auto;
 }
 
+#principal h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    width: auto;
+}
+
 #img-principal{
     display: block;
     margin-left: auto;
@@ -149,7 +165,7 @@ nav ul ul li a{
     margin-right: auto;
     margin-top: 40px;
     width: 50%;
-    text-align: center;
+    text-align: left;
     color: white;
     font-size: 20px;
     letter-spacing: 2px;
@@ -175,7 +191,7 @@ nav ul ul li a{
 
 #sinopsis{
     display: block;
-    width: 70%;
+    width: 80%;
     margin-top: 150px;
     margin-left: auto;
     margin-right: auto;
@@ -187,10 +203,31 @@ nav ul ul li a{
     font-size: 50px;
 }
 
+.subtitulo-sinopsis{
+    display: block;
+    color: white;
+    font-size: 30px;
+    text-decoration: underline;
+    margin-left: 7rem;
+}
+
 #texto-sinopsis{
+    width: auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+.temporadas{
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .sinopsis-img{
@@ -218,7 +255,7 @@ nav ul ul li a{
 /*                        -----SECCIÓN DE PERSONAJES-----                                              */
 
 .personaje{
-    width: 1200px;
+    width: 70%;
     background-color: white;
     margin-left: auto;
     margin-right: auto;
@@ -299,7 +336,8 @@ nav ul ul li a{
     margin-top: 40px;
     background-color: white;
     width: 70%;
-    height: 100px;
+    height: auto;
+    padding-bottom: 20px;
     border-radius: 10px;
     text-align: center;
     padding-top: 10px;
@@ -311,7 +349,7 @@ nav ul ul li a{
 
 .form{
     width: 70%;
-    height: 500px;
+    height: auto;
     text-align: center;
     gap: 40px;
     margin-left: auto;
@@ -363,16 +401,19 @@ nav ul ul li a{
 /*                        -----FOOTER DE LA PÁGINA-----                                               */
 
 #footer{
-    background-color: black;
-    height: 80px;
+    background-color: white;
+    height: auto;
     display: flex;
     justify-content: center;
     gap: 40px;
     margin-top: 40vh;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
 }
 
 #texto-footer{
-    color: white;
+    width: 20%;
+    color: black;
 }
 
 i{
@@ -385,7 +426,7 @@ i:hover{
 
 
 #redes{
-    width: 200px;
+    width: 20%;
     margin-top: -2px;
     display: flex;
     justify-content: space-around;
@@ -403,7 +444,7 @@ i:hover{
     right: -100px;
     width: 3rem;
     height: 3rem;
-    background-color: white;
+    background-color: rgb(219, 179, 179);
     border-radius: 30px;
     transition: right 0.3s ease;
 }
@@ -538,15 +579,30 @@ i:hover{
         font-size: 50px;
     }
 
+    .subtitulo-sinopsis{
+        margin-left: 2rem;
+    }
+
+    .temporadas{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
     .sinopsis-img{
-        display: none;
+        width: 90%;
     }
 
     .parrafos-sinopsis{
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 90%;
+        width: 100%;
         font-size: 20px;
     }
 
@@ -584,9 +640,6 @@ i:hover{
         width: 85%;
     }
 
-    section{
-        margin-bottom: -300px;
-    }
 
     /*-----------------------------------------------------------------------------------------------------*/
     /*                        -----PÁGINA DE PERSONAJE-----                                                */
@@ -619,5 +672,19 @@ i:hover{
         transition: right 0.3s ease;
     }
     
+    /*-----------------------------------------------------------------------------------------------------*/
+    /*                        -----FOOTER RESPONSIVE-----                                                */
     
+
+    #texto-footer{
+        width: 40%;
+    }
+
+    #redes{
+        width: 50%;
+        margin-top: -2px;
+        display: flex;
+        justify-content: space-around;
+    }
+
 }
